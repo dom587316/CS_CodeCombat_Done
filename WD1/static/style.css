@@ -1,0 +1,77 @@
+/* Các style cơ bản */
+body {
+    background-color: #f0f0f0;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container của poster */
+.poster-container {
+    perspective: 1000px; /* Thêm hiệu ứng 3D */
+}
+
+/* Card poster chính */
+.poster-card {
+    width: 350px;
+    background-color: #d7b587;
+    border: 3px solid #663300;
+    padding: 20px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+    transform: rotateX(10deg) rotateY(-5deg); /* Hiệu ứng xoay nhẹ */
+    position: relative;
+    z-index: 10;
+}
+
+/* Tựa đề "WANTED" */
+.wanted-title {
+    font-family: 'Impact', sans-serif;
+    font-size: 4em;
+    color: #c90000;
+    text-align: center;
+    margin: 0;
+    text-shadow: 2px 2px 0 #000;
+}
+
+/* Các phần nội dung khác */
+.content {
+    margin: 20px 0;
+}
+
+.name {
+    font-size: 2em;
+    text-align: center;
+    margin: 10px 0;
+    color: #333;
+}
+
+.reward p {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px 0;
+}
+
+/* Style cho các đồng phạm */
+.accomplices {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.accomplice-card {
+    background-color: #d0b090;
+    border: 2px solid #a07a50;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
+}
+
+.capture-text {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #444;
+}

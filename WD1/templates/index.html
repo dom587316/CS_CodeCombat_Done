@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanted Poster</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="poster-container">
+        <div class="poster-card">
+            <h1 class="wanted-title">WANTED</h1>
+            <div class="content">
+                <h2 class="name">{{ wanted.name }}</h2>
+                <p>FOR RECKLESS, INHUMAN CRIMES:</p>
+                <ul>
+                    {% for crime in wanted.crimes %}
+                        <li>{{ crime }}</li>
+                    {% endfor %}
+                </ul>
+                <div class="reward">
+                    <p>REWARD:</p>
+                    <p>{{ wanted.reward }}</p>
+                </div>
+                <div class="accomplices">
+                    <p>KNOWN ACCOMPLICES</p>
+                    {% for accomplice in wanted.accomplices %}
+                    <div class="accomplice-card">
+                        <p>{{ accomplice.name }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <h3 class="capture-text">CAPTURE ALIVE ONLY</h3>
+        </div>
+    </div>
+</body>
+</html>
